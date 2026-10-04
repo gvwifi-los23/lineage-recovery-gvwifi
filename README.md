@@ -20,6 +20,7 @@ The script prints the image size against the 39,845,888-byte RECOVERY partition.
 | 0010 bootwatch + SELinux recovery/charger-aware | recovery keeps SELinux permissive; the boot watchdog is not armed in recovery (`bootmode=2`) |
 | 0011 usb: reconnect gadget after UDC rebind | USB comes back after recovery switches adb and sideload |
 | 0012 fscrypt: implement GET_ENCRYPTION_POLICY_EX | lets userspace read v2 encryption policies |
+| 0013 usb: FunctionFS drops the kiocb reference in aio cancel | adbd restarts (entering/leaving sideload) can't leave the adb function stuck |
 
 ## Flashing
 Download mode (Power + Volume Down + Home, then Volume Up), Odin 3.10.7, AP = the tar,
