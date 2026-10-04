@@ -22,6 +22,12 @@ The script prints the image size against the 39,845,888-byte RECOVERY partition.
 | 0012 fscrypt: implement GET_ENCRYPTION_POLICY_EX | lets userspace read v2 encryption policies |
 | 0013 usb: FunctionFS drops the kiocb reference in aio cancel | adbd restarts (entering/leaving sideload) can't leave the adb function stuck |
 
+Also from that repo: `system/core` 0001 (libprocessgroup polls `cgroup.events` at most 5 ms at a time), so stopping adbd for sideload no longer waits 2.2 s.
+
+## Current build
+`lineage-recovery-gvwifi.tar` from the 20261004 (12:46) ROM build, SHA-256
+`02b555a9f7b4225311099063b4de19204567b41f434e781bc6defabca2d53223`.
+
 ## Flashing
 Download mode (Power + Volume Down + Home, then Volume Up), Odin 3.10.7, AP = the tar,
 **Auto Reboot off**. After PASS, hold Power + Volume Down until the screen is off, then
