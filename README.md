@@ -22,12 +22,14 @@ The script prints the image size against the 39,845,888-byte RECOVERY partition.
 | 0012 fscrypt: implement GET_ENCRYPTION_POLICY_EX | lets userspace read v2 encryption policies |
 | 0013 usb: FunctionFS drops the kiocb reference in aio cancel | adbd restarts (entering/leaving sideload) can't leave the adb function stuck |
 | 0014 fs: clear and free per-inode fscrypt/fs-verity info | reused inodes no longer inherit another file's key or fs-verity state |
+| 0016 serial: no magic SysRq from the UARTs | `adb reboot recovery` / `adb reboot sideload` (warm reboots) no longer hang after the Galaxy View logo |
+| 0017 battery: fuel gauge releases its I2C lock | battery readings can't freeze |
 
 Also from that repo: `system/core` 0001 (libprocessgroup polls `cgroup.events` at most 5 ms at a time), so stopping adbd for sideload no longer waits 2.2 s.
 
 ## Current build
-`lineage-recovery-gvwifi.tar` from the 20261005 ROM build, SHA-256
-`eef58bf9f2f701fcdfa7f514d3431d5a34411ed1ae0901599dd8ef19641a476c`.
+`lineage-recovery-gvwifi.tar` from the 20261015 ROM build, SHA-256
+`974bcc53f5237a82ec220978ed2e9ea324ebe2d153454e2d24aad93922018b39`.
 
 ## Flashing
 Download mode (Power + Volume Down + Home, then Volume Up), Odin 3.10.7, AP = the tar,
