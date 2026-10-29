@@ -32,7 +32,7 @@ Also from that repo: `system/core` 0001 (libprocessgroup polls `cgroup.events` a
 `974bcc53f5237a82ec220978ed2e9ea324ebe2d153454e2d24aad93922018b39`.
 
 ## Flashing
-Download mode (Power + Volume Down + Home, then Volume Up), Odin 3.10.7, AP = the tar,
+Download mode (Power + Volume Up + Volume Down; the tablet has no Home button; then Volume Up at the warning), Odin 3.10.7, AP = the tar,
 **Auto Reboot off**. After PASS, hold Power + Volume Down until the screen is off, then
 Power + Volume Up to enter recovery.
 
